@@ -1,0 +1,47 @@
+Development Checklist for Full Stack JavaScript - First Assignment
+
+1. Project Setup
+   - [✅] Created a new Node.js project.
+   - [✅] Initialized package.json using "npm init -y".
+   - [✅] Installed required dependencies: express, mongoose, dotenv, body-parser, pug, nodemon.
+   - [✅] Set up project folder structure:
+         - models/ (contains Mongoose schema)
+         - routes/ (contains Express routes)
+         - views/ (contains PUG templates: header.pug, footer.pug, index.pug, add.pug, edit.pug)
+         - public/ (for static assets)
+         - .env file (holds environment variables)
+         - index.js (main server file)
+
+2. Database Setup
+   - [✅] Created a MongoDB Atlas cluster.
+   - [✅] Enabled TCP access with 0.0.0.0/0 (for development).
+   - [✅] Created a database named "fullstack_CRUD" in Atlas.
+   - [✅] Updated .env with the correct MONGO_URI and PORT.
+
+3. CRUD Functionality
+   - [✅] Built a Mongoose schema for user data including:
+         - First Name, Last Name, Date of Birth, Address1, Address2, City, Postal Code, Country, Phone Number, Email, and User Notes.
+   - [✅] Created routes for:
+         - Displaying all users (GET '/')
+         - Adding a new user (GET '/add' and POST '/add')
+         - Editing an existing user (GET '/edit/:id' and POST '/edit/:id')
+         - Deleting a user (POST '/delete/:id')
+   - [✅] Implemented validations:
+         - Ensured Date of Birth is before today's date.
+         - Validated uniqueness for Email, First Name, and Phone Number.
+
+4. Templating and Styling
+   - [✅] Used PUG as the templating engine.
+   - [✅] Created separate PUG files for header, footer, add, edit, and display pages.
+   - [✅] Styled pages using W3CSS for menus, forms, and tables.
+
+5. Documentation and Submission
+   - [✅] Added header comments in index.js with my name and CNumber.
+   - [✅] Prepared a README.md with user instructions.
+   - [✅] Took screenshots of all three pages (Add, Edit, Display) with sample data.
+   - [✅] Created a ZIP file named "C0924501.zip" excluding the node_modules directory.
+
+Checklist Completed: All requirements have been met.
+
+   - Author: Premsingh Padya
+   - ID - C0924501

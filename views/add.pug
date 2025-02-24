@@ -1,0 +1,61 @@
+//- views/add.pug
+include header.pug
+
+// Add a container with a background
+div.w3-container.w3-card-4.w3-light-grey.w3-padding-32
+  h1 Add New User
+  
+  // Form with nice styling
+  form(action="/add", method="POST")
+    
+    // Input fields styled with W3.CSS classes for better appearance
+    div.w3-padding-small
+      label(for="firstName") First Name:
+      input.w3-input.w3-border(type="text", name="firstName", required)
+
+    div.w3-padding-small
+      label(for="lastName") Last Name:
+      input.w3-input.w3-border(type="text", name="lastName", required)
+
+    div.w3-padding-small
+      label(for="dob") Date of Birth:
+      input.w3-input.w3-border(type="date", name="dob", required)
+
+    div.w3-padding-small
+      label(for="address1") Address Line 1:
+      input.w3-input.w3-border(type="text", name="address1", required)
+
+    div.w3-padding-small
+      label(for="address2") Address Line 2 (Optional):
+      input.w3-input.w3-border(type="text", name="address2")
+
+    div.w3-padding-small
+      label(for="city") City:
+      input.w3-input.w3-border(type="text", name="city", required)
+
+    div.w3-padding-small
+      label(for="postalCode") Postal Code:
+      input.w3-input.w3-border(type="text", name="postalCode", required)
+
+    div.w3-padding-small
+      label(for="country") Country:
+      input.w3-input.w3-border(type="text", name="country", required)
+
+    div.w3-padding-small
+      label(for="phone") Phone:
+      input.w3-input.w3-border(type="number", name="phone", required)
+
+    div.w3-padding-small
+      label(for="email") Email:
+      input.w3-input.w3-border(type="email", name="email", required)
+
+    div.w3-padding-small
+      label(for="notes") Notes:
+      textarea.w3-input.w3-border(name="notes")
+
+    // Submit button styled
+    div.w3-padding-small
+      button.w3-button.w3-green.w3-large(type="submit") Add
+
+// Include footer
+include footer.pug

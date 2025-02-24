@@ -1,0 +1,53 @@
+// Include the header file for consistency across all pages
+include header.pug
+
+div.w3-container
+  h2 Users List // Displaying the title for the Users List page
+
+  // Creating a table structure with W3CSS class for styling
+  table.w3-table-all
+    thead
+      tr
+        th Name 
+        th Date of Birth 
+        th Address 
+        th City 
+        th Postal Code
+        th Country 
+        th Phone 
+        th Email 
+        th Notes 
+        th Actions (Edit/Delete)
+
+    tbody
+      // Loop through each user and display their data in a table row
+      each user in users
+        tr
+          td= user.firstName + " " + user.lastName 
+          
+          // Handling possible null value for date of birth, display "N/A" if null
+          td= user.dob ? user.dob.toDateString() : "N/A" 
+
+          // Concatenating address1 and address2, displaying them together if address2 exists
+          td= user.address1 + (user.address2 ? ", " + user.address2 : "") 
+
+          td= user.city
+          td= user.postalCode
+          td= user.country
+          td= user.phone
+          td= user.email
+          td= user.notes
+
+          td
+            // Edit button: Allow user to edit their details
+            a.w3-button.w3-blue(href="/edit/" + user._id) Edit
+
+            // Delete button: Allows deletion of the user, with a confirmation prompt to prevent accidental deletions
+            form(action="/delete/" + user._id, method="POST", style="display:inline" onsubmit="return confirm('Hey Stop, Prem Here..! Do you really want to delete this user?')") 
+              button.w3-button.w3-red(type="submit") Delete
+
+  // Add new user button: Redirects to the form for adding a new user
+  a.w3-button.w3-brown.w3-center(href="/add") Add New User
+
+// Include the footer file for consistency across all pages
+include footer.pug

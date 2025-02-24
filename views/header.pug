@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    // Setting the title of the page dynamically, with a default title if no title is provided
+    title User Management System
+    // Linking the W3CSS stylesheet for styling the page elements
+    link(rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css")
+    link(rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto")
+    meta(name="viewport" content="width=device-width, initial-scale=1")
+  body
+    header
+      // Creating the main header section with a grey background and bar-style navigation
+      div.w3-bar.w3-grey
+        // Centering the logo and title in the header with a floating effect using W3.CSS
+        div.w3-container.w3-center
+          div.w3-xlarge.w3-text-brown.w3-animate-opacity.w3-hover-shadow-xlarge
+            // Displaying the main logo (name) in large, brown text with animation and hover shadow effect
+            span Premsingh Padya
+          div.w3-medium.w3-text-white
+            // Displaying the student ID below the logo with white text for visibility
+            span ID: C0924501
+
+        // Creating a section for navigation buttons, centered beneath the logo
+        div.w3-container.w3-center
+          a.w3-button.w3-orange(href="/") Home
+          a.w3-button.w3-black(href="/add") Add User
+
+        // Displaying a "Welcome!" message aligned to the right
+        div.w3-bar-item.w3-right
+          span.w3-text-black.w3-animate-opacity.w3-large.w3-animate-top Welcome!

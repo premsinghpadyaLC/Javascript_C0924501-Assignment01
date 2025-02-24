@@ -1,0 +1,72 @@
+//- views/edit.pug
+include header.pug
+
+// Adding a container with a background and card styling for a clean layout
+div.w3-container.w3-card-4.w3-light-grey.w3-padding-32
+  h1 Edit User
+
+  // Creating a form with POST method to handle the submission for editing user data
+  // The action points to the specific user to be edited, using the user's ID in the URL
+  form(action="/edit/" + user._id, method="POST")
+    
+    // Creating the input field for the First Name, pre-filled with the user's existing first name
+    div.w3-padding-small
+      label(for="firstName") First Name:
+      input.w3-input.w3-border(type="text", name="firstName", value=user.firstName, required)
+
+    // Creating the input field for the Last Name, pre-filled with the user's existing last name
+    div.w3-padding-small
+      label(for="lastName") Last Name:
+      input.w3-input.w3-border(type="text", name="lastName", value=user.lastName, required)
+
+    // Creating a date input field for the Date of Birth, pre-filled with the user's existing birth date
+    div.w3-padding-small
+      label(for="dob") Date of Birth:
+      input.w3-input.w3-border(type="date", name="dob", value=user.dob.toISOString().split('T')[0], required)
+
+    // Creating an input field for the Address Line 1, pre-filled with the user's current address line 1
+    div.w3-padding-small
+      label(for="address1") Address Line 1:
+      input.w3-input.w3-border(type="text", name="address1", value=user.address1, required)
+
+    // Creating an optional input field for Address Line 2, pre-filled with the user's current address line 2
+    div.w3-padding-small
+      label(for="address2") Address Line 2 (Optional):
+      input.w3-input.w3-border(type="text", name="address2", value=user.address2)
+
+    // Creating an input field for the City, pre-filled with the user's current city
+    div.w3-padding-small
+      label(for="city") City:
+      input.w3-input.w3-border(type="text", name="city", value=user.city, required)
+
+    // Creating an input field for the Postal Code, pre-filled with the user's current postal code
+    div.w3-padding-small
+      label(for="postalCode") Postal Code:
+      input.w3-input.w3-border(type="text", name="postalCode", value=user.postalCode, required)
+
+    // Creating an input field for the Country, pre-filled with the user's current country
+    div.w3-padding-small
+      label(for="country") Country:
+      input.w3-input.w3-border(type="text", name="country", value=user.country, required)
+
+    // Creating an input field for the Phone number, pre-filled with the user's current phone number
+    div.w3-padding-small
+      label(for="phone") Phone:
+      input.w3-input.w3-border(type="number", name="phone", value=user.phone, required)
+
+    // Creating an input field for the Email, pre-filled with the user's current email address
+    div.w3-padding-small
+      label(for="email") Email:
+      input.w3-input.w3-border(type="email", name="email", value=user.email, required)
+
+    // Creating a textarea for the Notes section, pre-filled with the user's current notes
+    div.w3-padding-small
+      label(for="notes") Notes:
+      textarea.w3-input.w3-border(name="notes")= user.notes
+
+    // Creating a styled submit button to update the user information
+    div.w3-padding-small
+      button.w3-button.w3-green.w3-large(type="submit") Update User
+
+// Including footer to display at the bottom of the page
+include footer.pug
