@@ -45,3 +45,12 @@ Checklist Completed: All requirements have been met.
 
    - Author: Premsingh Padya
    - ID - C0924501
+
+   Link:
+   
+   mongodb+srv://premsinghpadyalc:Prem%40944110@cluster0.zl6mg.mongodb.net/fullstack_CRUD?retryWrites=true&w=majority
+
+   Note: here I user %40 for @ in my password
+
+   Connection info
+    MongoDB 8.0.4 Atlas
