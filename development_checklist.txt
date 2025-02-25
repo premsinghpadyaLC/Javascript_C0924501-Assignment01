@@ -46,6 +46,15 @@ Checklist Completed: All requirements have been met.
    - Author: Premsingh Padya
    - ID - C0924501
 
+      prems@DESKTOP-383PIN3 MINGW64 ~/fullstack-crud (master)
+    $ npm start
+
+    > fullstack-crud@1.0.0 start
+    > node index.js
+
+    🚀 Server running on port 3000
+    ✅ MongoDB Connected Successfully!
+
    Link:
    
    mongodb+srv://premsinghpadyalc:Prem%40944110@cluster0.zl6mg.mongodb.net/fullstack_CRUD?retryWrites=true&w=majority

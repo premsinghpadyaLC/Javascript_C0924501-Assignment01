@@ -190,4 +190,15 @@ git push -u origin master
 
    Note: here I user %40 for @ in my password
 
+
+   prems@DESKTOP-383PIN3 MINGW64 ~/fullstack-crud (master)
+    $ npm start
+
+    > fullstack-crud@1.0.0 start
+    > node index.js
+
+    🚀 Server running on port 3000
+    ✅ MongoDB Connected Successfully!
+
+
 Thank you
